@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="app">
+    <head>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+        <script src="js/script.js"></script>
+    </head>
+    <body ng-controller="PruebaController">
+        <h1>{{mensaje}}</h1>
+        <input type="button" ng-click="cambioMensaje()" name="boton" value="boton">
+        <br>
+        Nuevo Mensaje: <input type="text" name="texto" ng-model="mensaje">
+    </body>
+</html>
