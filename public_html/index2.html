@@ -25,26 +25,26 @@ and open the template in the editor.
                 <label for="sexo">Sexo: </label><select id="sexo" name="sexo" type="checkbox" ng-model="seguro.sexo"/><option value="">--</option><option value="F">Femenino</option><option value="M">Masculino</option></select><br>
                 <label for="edoCivil">Estado Civil: </label><input id="edoCivil" name="edoCivil" type="checkbox" ng-model="seguro.edoCivil"/><br>
                 <label for="numHijos">Número Hijos: </label><input id="numHijos" name="numHijos" type="text" ng-model="seguro.numHijos"/><br>
-                <label for="embarazada">Embarazada: </label><input id="embarazada" name="embarazada" type="checkbox" ng-model="seguro.embarazada"/><br>
+                <label for="embarazada" ng-show="seguro.sexo==='F'">Embarazada: </label><input id="embarazada" name="embarazada" type="checkbox" ng-model="seguro.embarazada" ng-show="seguro.sexo==='F'"/><br>
                 <label for="fechaCrea">Fecha de Cración: </label><input id="fechaCrea" name="fechaCrea" type="text" ng-model="seguro.fechaCrea"/><br>
             </fieldset>
             <fieldset>
                 <legend>
                     Coberturas
                 </legend>
-                <label for="oftalmologia">Oftalmología: </label><input id="oftalmologia" name="oftalmologia" type="checkbox" ng-model="seguro.oftalmologia"/><br>
-                <label for="dental">Dental: </label><input id="dental" name="dental" type="checkbox" ng-model="seguro.dental"/><br>
-                <label for="fecundaInvitro">Fecundación Invitro: </label><input id="fecundaInvitro" name="fecundaInvitro" type="checkbox" ng-model="seguro.fecundaInvitro"/><br>
+                <label for="oftalmologia">Oftalmología: </label><input id="oftalmologia" name="oftalmologia" type="checkbox" ng-model="seguro.cobertura.oftalmologia"/><br>
+                <label for="dental">Dental: </label><input id="dental" name="dental" type="checkbox" ng-model="seguro.cobertura.dental"/><br>
+                <label for="fecundaInvitro" ng-show="seguro.sexo==='F'">Fecundación Invitro: </label><input id="fecundaInvitro" name="fecundaInvitro" type="checkbox" ng-model="seguro.cobertura.fecundaInvitro" ng-show="seguro.sexo==='F'"/><br>
             </fieldset>
             <fieldset>
                 <legend>
                     Enfermedades
                 </legend>
-                <label for="corazon">Corazon: </label><input id="corazon" name="corazon" type="checkbox" ng-model="seguro.corazon"/><br>
-                <label for="estomacal">Estomacal: </label><input id="estomacal" name="estomacal" type="checkbox" ng-model="seguro.estomacal"/><br>
-                <label for="rinon">Riñones: </label><input id="rinon" name="rinon" type="checkbox" ng-model="seguro.rinon"/><br>
-                <label for="alergia">Alergia: </label><input id="alergia" name="alergia" type="checkbox" ng-model="seguro.alergia"/><br>
-                <label for="nomAlergia">Nombre de Alergia: </label><input id="nomAlergia" name="nomAlergia" type="checkbox" ng-model="seguro.nomAlergia"/><br>
+                <label for="corazon">Corazon: </label><input id="corazon" name="corazon" type="checkbox" ng-model="seguro.enfermedades.corazon"/><br>
+                <label for="estomacal">Estomacal: </label><input id="estomacal" name="estomacal" type="checkbox" ng-model="seguro.enfermedades.estomacal"/><br>
+                <label for="rinon">Riñones: </label><input id="rinon" name="rinon" type="checkbox" ng-model="seguro.enfermedades.rinon"/><br>
+                <label for="alergia">Alergia: </label><input id="alergia" name="alergia" type="checkbox" ng-model="seguro.enfermedades.alergia"/><br>
+                <label for="nomAlergia">Nombre de Alergia: </label><input ng-disabled="deshabilitarAlergia()" id="nomAlergia" name="nomAlergia" type="text" ng-model="seguro.enfermedades.nomAlergia"/><br>
             </fieldset>            
         </form>
     </body>

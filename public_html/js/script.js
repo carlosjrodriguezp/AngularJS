@@ -1,14 +1,6 @@
 var app = angular.module("app",[]);
 
-function PruebaController($scope){
-    $scope.mensaje = "prueba angular";
-    
-    $scope.cambioMensaje = function() {
-        $scope.mensaje = "nuevo mensaje";
-    };
-};
-
-function SeguroController($scope){
+app.controller("SeguroController", ['$scope',function ($scope){
     $scope.seguro = {
         nif:"",
         nombre:"",
@@ -32,4 +24,8 @@ function SeguroController($scope){
         },
         fechaCrea:new Date()
     };
-}
+    
+    $scope.deshabilitarAlergia = function() {
+        return $scope.seguro.enfermedades.alergia===false; //JavaScript: The good parts
+    };
+}]);
