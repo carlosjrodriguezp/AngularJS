@@ -13,6 +13,7 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body ng-controller="SeguroController">
+    <ng-include src="'cabecera.html'"></ng-include>
         <form>
             <fieldset>
                 <legend>
@@ -22,10 +23,10 @@ and open the template in the editor.
                 <label for="nombre">Nombre: </label><input id="nombre" name="nombre" type="text" ng-model="seguro.nombre"/><br>
                 <label for="apellido">Apellido: </label><input id="apellido" name="apellido" type="text" ng-model="seguro.apellido"/><br>
                 <label for="edad">Edad: </label><input id="edad" name="edad" type="text" ng-model="seguro.edad"/><br>
-                <label for="sexo">Sexo: </label><select id="sexo" name="sexo" type="checkbox" ng-model="seguro.sexo"/><option value="">--</option><option value="F">Femenino</option><option value="M">Masculino</option></select><br>
+                <label for="sexo">Sexo: </label><select id="sexo" name="sexo" type="checkbox" ng-model="seguro.sexo" ng-options="sexo.codSex as sexo.descripcion for sexo in sexos"/><option value="">--</option></select><br>
                 <label for="edoCivil">Estado Civil: </label><input id="edoCivil" name="edoCivil" type="checkbox" ng-model="seguro.edoCivil"/><br>
                 <label for="numHijos">Número Hijos: </label><input id="numHijos" name="numHijos" type="text" ng-model="seguro.numHijos"/><br>
-                <label for="embarazada" ng-show="seguro.sexo==='F'">Embarazada: </label><input id="embarazada" name="embarazada" type="checkbox" ng-model="seguro.embarazada" ng-show="seguro.sexo==='F'"/><br>
+                <label for="embarazada" ng-show="seguro.sexo === 'F'">Embarazada: </label><input id="embarazada" name="embarazada" type="checkbox" ng-model="seguro.embarazada" ng-show="seguro.sexo === 'F'"/><br>
                 <label for="fechaCrea">Fecha de Cración: </label><input id="fechaCrea" name="fechaCrea" type="text" ng-model="seguro.fechaCrea"/><br>
             </fieldset>
             <fieldset>
@@ -34,7 +35,7 @@ and open the template in the editor.
                 </legend>
                 <label for="oftalmologia">Oftalmología: </label><input id="oftalmologia" name="oftalmologia" type="checkbox" ng-model="seguro.cobertura.oftalmologia"/><br>
                 <label for="dental">Dental: </label><input id="dental" name="dental" type="checkbox" ng-model="seguro.cobertura.dental"/><br>
-                <label for="fecundaInvitro" ng-show="seguro.sexo==='F'">Fecundación Invitro: </label><input id="fecundaInvitro" name="fecundaInvitro" type="checkbox" ng-model="seguro.cobertura.fecundaInvitro" ng-show="seguro.sexo==='F'"/><br>
+                <label for="fecundaInvitro" ng-show="seguro.sexo === 'F'">Fecundación Invitro: </label><input id="fecundaInvitro" name="fecundaInvitro" type="checkbox" ng-model="seguro.cobertura.fecundaInvitro" ng-show="seguro.sexo === 'F'"/><br>
             </fieldset>
             <fieldset>
                 <legend>
