@@ -1,6 +1,6 @@
 var app = angular.module("app",[]);
 
-app.controller("SeguroController", ['$scope',function ($scope){
+app.controller("SeguroController", ['$scope','$log','$http',function ($scope,$log,$http){
     $scope.seguro = {
         nif:"",
         nombre:"",
@@ -28,4 +28,16 @@ app.controller("SeguroController", ['$scope',function ($scope){
     $scope.deshabilitarAlergia = function() {
         return $scope.seguro.enfermedades.alergia===false; //JavaScript: The good parts
     };
+    
+    $log.debug("ejecutando acciones desde AngularJS");
+    
+    $http({
+        method: 'GET',
+        url: 'js/datos.json'
+    }).success(function(data, status, headers, config){
+        $scope.seguro=data;
+    }).error(function(data, status, headers, config){
+        alert("Error del servicio "+status);
+    });
+    
 }]);
