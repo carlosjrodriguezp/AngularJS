@@ -1,0 +1,23 @@
+{
+        "idSeguro": 5,
+        "nif": "23236773B",
+        "nombre": "Teresa",
+        "apellido": "Rubio",
+        "edad": 36,
+        "sexo": "F",
+        "edoCivil": false,
+        "numHijos": 0,
+        "embarazada": true,
+        "cobertura": {
+            "oftalmologia": false,
+            "dental": false,
+            "fecundaInvitro": true
+        },
+        "enfermedades": {
+            "corazon": false,
+            "estomacal": false,
+            "rinon": false,
+            "alergia": false,
+            "nomAlergia": ""
+    }
+}

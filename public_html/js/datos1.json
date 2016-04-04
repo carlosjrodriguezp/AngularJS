@@ -1,0 +1,23 @@
+{
+        "idSeguro": 1,
+        "nif": "12345678Z",
+        "nombre": "Carlos",
+        "apellido": "Cano",
+        "edad": 41,
+        "sexo": "M",
+        "edoCivil": true,
+        "numHijos": 3,
+        "embarazada": false,
+        "cobertura": {
+            "oftalmologia": true,
+            "dental": false,
+            "fecundaInvitro": false
+        },
+        "enfermedades": {
+            "corazon": true,
+            "estomacal": false,
+            "rinon": false,
+            "alergia": true,
+            "nomAlergia": "Acaros"
+    }
+}

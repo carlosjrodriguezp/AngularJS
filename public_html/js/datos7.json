@@ -1,0 +1,23 @@
+{
+        "idSeguro": 7,
+        "nif": "34804406R",
+        "nombre": "Rosa",
+        "apellido": "Muñoz",
+        "edad": 45,
+        "sexo": "F",
+        "edoCivil": true,
+        "numHijos": 3,
+        "embarazada": false,
+        "cobertura": {
+            "oftalmologia": false,
+            "dental": false,
+            "fecundaInvitro": false
+        },
+        "enfermedades": {
+            "corazon": false,
+            "estomacal": false,
+            "rinon": false,
+            "alergia": false,
+            "nomAlergia": ""
+    }
+}

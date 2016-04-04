@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body ng-app="myApp">
+
+        <div ng-controller="myController">
+            <input type="text" ng-model="state.newPersonName">
+            <input type="text" ng-model="state.newPersonOcupation">
+            <button ng-click="addPerson(clearFields);">Add</button>
+            <ul ng-if="people">
+                <li ng-repeat="person in people">
+                    <div ng-show="person.update">
+                        <input type="text" ng-model="person.name">
+                        <input type="text" ng-model="person.ocupation">
+                    </div>
+                    <span ng-hide="person.update">
+                        {{ person.name}} - {{ person.ocupation}} - {{person.details.birthdate}}
+                    </span>
+                    <button ng-click="deletePerson(person)">X</button><button ng-click="updatePerson(person)">U</button></li>
+            </ul>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

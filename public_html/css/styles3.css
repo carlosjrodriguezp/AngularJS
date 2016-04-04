@@ -1,0 +1,41 @@
+div#menu-container {
+    position: relative;
+}
+
+ul.nivel-1 {
+    margin: 0;
+    width:480px;
+}
+
+ul.nivel-2 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top:30px;
+    width: 120px;
+}
+
+ul.nivel-1 li > a:link,ul.nivel-1 li > a:visited,ul.nivel-1 li * a:link,ul.nivel-1 li * a:visited {
+    text-decoration: none;
+    width: 120px;
+}
+
+.nivel-1 li {
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.nivel-1 li > a:link,ul.nivel-1 li > a:visited {
+    float:left;
+}
+
+ul.nivel-1 li > a:hover {
+    background-color: aliceblue;
+}
+
+ul.nivel-1 li * a:link,ul.nivel-1 li * a:visited {
+    display: block;
+    float: none;
+}

@@ -1,0 +1,23 @@
+{
+        "idSeguro": 8,
+        "nif": "23244114S",
+        "nombre": "Alejandro",
+        "apellido": "Valeno",
+        "edad": 19,
+        "sexo": "M",
+        "edoCivil": false,
+        "numHijos": 0,
+        "embarazada": false,
+        "cobertura": {
+            "oftalmologia": true,
+            "dental": false,
+            "fecundaInvitro": false
+        },
+        "enfermedades": {
+            "corazon": false,
+            "estomacal": false,
+            "rinon": false,
+            "alergia": true,
+            "nomAlergia": "Leche"
+    }
+}

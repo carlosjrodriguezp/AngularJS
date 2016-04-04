@@ -1,0 +1,20 @@
+
+        <div>Filtrar: <input ng-model="filtro.apellido" type="text"></div>
+        <table>
+            <tr ng-repeat="seguro in seguros | miFiltro:{apellido:filtro.apellido}" ng-style="{color:($odd?'red':'green')}">
+                <td><a ng-href="#/seguro/edit/{{seguro.idSeguro}}">{{seguro.nif}}</a></td>
+                <td>{{seguro.nombre}}</td>
+                <td>{{seguro.apellido}}</td>
+                <td ng-switch on="seguro.sexo">
+                    <span ng-switch-when="F">Femenino</span>
+                    <span ng-switch-when="M">Masculino</span>
+                    <span ng-switch-when=""></span>
+                    <span ng-switch-default>Desconocido</span></td>
+            </tr>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Cantidad: </td>
+                    <td ng-bind="seguros.length"></td>
+                </tr>
+            </tfoot>       
+        </table>
