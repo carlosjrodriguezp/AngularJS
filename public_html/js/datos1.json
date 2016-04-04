@@ -4,7 +4,7 @@
         "nombre": "Carlos",
         "apellido": "Cano",
         "edad": 41,
-        "sexo": "H",
+        "sexo": "M",
         "edoCivil": true,
         "numHijos": 3,
         "embarazada": false,

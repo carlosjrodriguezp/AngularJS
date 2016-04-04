@@ -11,6 +11,9 @@ and open the template in the editor.
 body {
     margin: 0;
     font-family: Verdana, sans-serif;
-    font-size: 40px;
+    font-size: 12px;
 }
 
+.ng-invalid {
+    border-color: red;
+}

@@ -1,23 +1,23 @@
 {
-        "idSeguro": 1,
-        "nif": "12345678Z",
-        "nombre": "Carlos",
-        "apellido": "Cano",
-        "edad": 41,
-        "sexo": "H",
+        "idSeguro": 6,
+        "nif": "27469252F",
+        "nombre": "Alfredo",
+        "apellido": "Padilla",
+        "edad": 45,
+        "sexo": "M",
         "edoCivil": true,
-        "numHijos": 3,
+        "numHijos": 2,
         "embarazada": false,
         "cobertura": {
             "oftalmologia": true,
-            "dental": false,
+            "dental": true,
             "fecundaInvitro": false
         },
         "enfermedades": {
             "corazon": true,
             "estomacal": false,
             "rinon": false,
-            "alergia": true,
-            "nomAlergia": "Acaros"
+            "alergia": false,
+            "nomAlergia": ""
     }
 }

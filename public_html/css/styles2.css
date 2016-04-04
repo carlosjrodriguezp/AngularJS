@@ -1,0 +1,93 @@
+body {
+    background: aliceblue;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+#menu {
+    width: 100%;
+    background: #555;
+    text-align: center;
+    position: fixed;
+    top: 0; 
+}
+ul {
+    text-align: left;
+    display: inline;
+    margin: 0;
+    list-style: none;
+}
+ul li {
+    position: relative;
+    display: inline-block;
+    margin-right: -4px;
+    padding: 15px 20px;
+    background: #555;
+    cursor: pointer;
+    color: #fff;
+
+}
+ul li:hover {
+    background: black;
+}
+ul li ul {
+    position: absolute;
+    visibility: hidden;  
+    opacity: 0;
+    padding: 0;
+    top: 48px;
+    left: 0;
+    width: 150px;
+}
+ul li ul li { 
+    background: #555; 
+    display: block; 
+    color: #fff;
+}
+ul li ul li:hover {
+    background: black;
+}
+.level2,#lista12X {
+    transition: opacity 1s, visibility 1s;
+    -webkit-transition: opacity 1s, visibility 1s;
+}
+ul li:hover .level2 {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+#lista12X {
+    left: 154px;
+    top: 0px;
+}
+#lista12:hover #lista12X {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+
+}
+.container {
+    background-color: #d9e6f2;
+    width: 98%;
+    height: 500px;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 60px;
+    border-radius: 5px;
+}
+li:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;    
+}
+#lista12X li:first-child {
+    border-top-right-radius: 5px;
+}
+#dos{
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 1s, visibility 1s;
+}
+#uno:hover #dos{
+    visibility: visible;
+    opacity: 1;
+}

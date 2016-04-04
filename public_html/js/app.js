@@ -6,10 +6,10 @@ var app = angular.module('myApp', []);
 
 // PeopleController.js
 app.controller('myController', function ($scope, peopleService) {
-    
-    $scope.fields1 = { show: false};
-    $scope.fields2 = { show: true};
-    
+
+    $scope.fields1 = {show: false};
+    $scope.fields2 = {show: true};
+
     $scope.state = {
         newPersonName: '',
         newPersonOcupation: ''
@@ -81,7 +81,7 @@ app.service('peopleService', function ($q) {
         // return [
         //      {name: 'CarlosSincrono', ocupation: 'Developer'}
         // ];
-    };
+    }
 
     this.personDetails = function (id) {
         var deferred = $q.defer();

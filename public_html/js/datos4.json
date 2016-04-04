@@ -1,0 +1,23 @@
+{
+        "idSeguro": 4,
+        "nif": "34828938S",
+        "nombre": "Angel",
+        "apellido": "Navarro",
+        "edad": 21,
+        "sexo": "M",
+        "edoCivil": false,
+        "numHijos": 0,
+        "embarazada": false,
+        "cobertura": {
+            "oftalmologia": true,
+            "dental": true,
+            "fecundaInvitro": false
+        },
+        "enfermedades": {
+            "corazon": false,
+            "estomacal": false,
+            "rinon": false,
+            "alergia": true,
+            "nomAlergia": "Graminias"
+    }
+}
