@@ -42,25 +42,30 @@ function RemoteResource($http, $q, baseUrl) {
 
         $http({
             method: 'GET',
-            url: baseUrl + '/datos' + idSeguro + '.json'
+            url: '/API_Java/api/SeguroMedico/' + idSeguro
         }).success(function (data, status, headers, config) {
             deferred.resolve(data);
         }).error(function (data, status, headers, config) {
-            deferred.reject(status);
+            if(status === 400){
+                deferred.reject(status);
+            }else{
+                throw new Error("Fallo obtener los datos: "+ status +"\n"+data);
+            }
+            
         });
 
         return promise;
     };
     
-    this.edit = function(){
-        var deferred = $q.defer();
-        var promise = deferred.promise;
-        
-        $http({
-            method: 'PUT',
-            url: baseUrl + '/datos'+ idSeguro + '.jason'
-        });
-    };
+//    this.edit = function(){
+//        var deferred = $q.defer();
+//        var promise = deferred.promise;
+//        
+//        $http({
+//            method: 'PUT',
+//            url: baseUrl + '/datos'+ idSeguro + '.jason'
+//        });
+//    };
     
     this.list = function () {
         var deferred = $q.defer();
@@ -68,37 +73,19 @@ function RemoteResource($http, $q, baseUrl) {
 
         $http({
             method: 'GET',
-            url: baseUrl + '/listado_seguros.json'
+            url: '/API_Java/api/SeguroMedico/'
         }).success(function (data, status, headers, config) {
             deferred.resolve(data);
         }).error(function (data, status, headers, config) {
-            deferred.reject(status);
+            if(status === 400){
+                deferred.reject(status);                
+            }else{
+                throw new Error("Fallo obtener los datos: "+ status +"\n"+data);
+            }
         });
 
         return promise;
     };
-
-//    this.get = function (fnOk, fnError) {
-//        $http({
-//            method: 'GET',
-//            url: baseUrl + '/datos.json'
-//        }).success(function (data, status, headers, config) {
-//            fnOk(data);
-//        }
-//        ).error(function (data, status, headers, config) {
-//            fnError(data);
-//        });
-//    }
-//    this.list = function (fnOk, fnError) {
-//        $http({
-//            method: 'GET',
-//            url: baseUrl + '/listado_seguros.json'
-//        }).success(function (data, status, headers, config) {
-//            fnOk(data, status);
-//        }).error(function (data, status, headers, config) {
-//            fnError(data, status);
-//        });
-//    }
 }
 
 function RemoteResourceProvider() {
